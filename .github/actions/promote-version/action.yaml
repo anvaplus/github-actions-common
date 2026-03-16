@@ -1,0 +1,23 @@
+name: 'Promote Version'
+description: 'Promotes a version to a new type'
+inputs:
+  version:
+    description: 'The version to promote'
+    required: true
+  promote-type:
+    description: 'The target prerelease suffix (e.g., beta, rc). Any non-empty word string is accepted. Ignored when is-stable is true.'
+    required: true
+  is-stable:
+    description: 'When true, promotes to a stable version (no suffix). Overrides promote-type.'
+    required: false
+    default: 'false'
+  tag-repo:
+    description: 'Flag to push the tag to the repository'
+    required: false
+    default: 'false'
+outputs:
+  promoted-version:
+    description: 'The promoted version'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

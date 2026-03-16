@@ -1,0 +1,18 @@
+# .github/actions/next-version/action.yaml
+name: 'Next Version'
+description: 'A custom GitHub Action to determine the next version'
+inputs:
+  version-type:
+    description: 'The prerelease suffix (e.g. alpha, beta, rc). Any non-empty word string is accepted.'
+    required: true
+    default: 'alpha'
+  tag-repo:
+    description: 'Whether to tag the repository with the new tag'
+    required: false
+    default: 'false'
+outputs:
+  new-version:
+    description: 'The new bumped version'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'

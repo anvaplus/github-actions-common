@@ -1,0 +1,34 @@
+{
+  "name": "next-version",
+  "version": "1.0.0",
+  "description": "GitHub Action to compute the next prerelease version tag from repository git tags.",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "test": "node --test '**/*.test.js'",
+    "package": "ncc build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anvaplus/github-actions-common.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anvaplus/github-actions-common/issues"
+  },
+  "homepage": "https://github.com/anvaplus/github-actions-common#readme",
+  "dependencies": {
+    "@actions/core": "^1.11.1"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.3"
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "overrides": {
+    "undici": "^6.23.1"
+  }
+}
